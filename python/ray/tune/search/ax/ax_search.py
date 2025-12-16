@@ -201,7 +201,9 @@ class AxSearch(Searcher):
         try:
             exp = self._ax.experiment
             has_experiment = True
-        except ValueError:
+        except (ValueError, AssertionError):
+            # ValueError: older Ax versions raise this when experiment not set
+            # AssertionError: newer Ax versions (1.0.0+) raise this when experiment not set
             has_experiment = False
 
         if not has_experiment:
@@ -247,7 +249,15 @@ class AxSearch(Searcher):
                     )
                 )
 
-        exp = self._ax.experiment
+        # Access experiment - should exist now (either created above or already existed)
+        try:
+            exp = self._ax.experiment
+        except (ValueError, AssertionError) as e:
+            # This should not happen if create_experiment succeeded, but handle it defensively
+            raise RuntimeError(
+                "Failed to access Ax experiment after setup. "
+                "This may indicate an issue with the Ax client setup."
+            ) from e
 
         # Update mode and metric from experiment if it has been passed
         self._mode = "min" if exp.optimization_config.objective.minimize else "max"

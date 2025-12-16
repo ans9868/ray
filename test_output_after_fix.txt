@@ -1,0 +1,48 @@
+Traceback (most recent call last):
+  File "/Volumes/CrucialX6/Home/projects/ray/test_ax_tutorial_matrix.py", line 27, in test_tutorial_example_1
+    ax_search = AxSearch()
+  File "/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/tune/search/ax/ax_search.py", line 156, in __init__
+    assert (
+AssertionError: Ax must be installed!
+            You can install AxSearch with the command:
+            `pip install ax-platform`.
+Traceback (most recent call last):
+  File "/Volumes/CrucialX6/Home/projects/ray/test_ax_tutorial_matrix.py", line 75, in test_tutorial_example_2
+    ax_search = AxSearch(space=parameters, metric="score", mode="max")
+  File "/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/tune/search/ax/ax_search.py", line 156, in __init__
+    assert (
+AssertionError: Ax must be installed!
+            You can install AxSearch with the command:
+            `pip install ax-platform`.
+======================================================================
+AxSearch Tutorial Test Matrix
+======================================================================
+
+Ax version: not installed
+Ray version: (using installed package)
+
+======================================================================
+TUTORIAL EXAMPLE 1: AxSearch() with param_space in Tuner
+======================================================================
+✗ FAILED: AssertionError: Ax must be installed!
+            You can install AxSearch with the command:
+            `pip install ax-platform`.
+
+======================================================================
+TUTORIAL EXAMPLE 2: AxSearch with space parameter
+======================================================================
+✗ FAILED: AssertionError: Ax must be installed!
+            You can install AxSearch with the command:
+            `pip install ax-platform`.
+
+======================================================================
+SUMMARY
+======================================================================
+Example 1 (param_space): ✗ FAILED
+  Error: AssertionError: Ax must be installed!
+            You can install AxSearch with the command:
+            `pip install ax-platform`.
+Example 2 (space parameter): ✗ FAILED
+  Error: AssertionError: Ax must be installed!
+            You can install AxSearch with the command:
+            `pip install ax-platform`.
