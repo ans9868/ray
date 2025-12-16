@@ -137,6 +137,27 @@ except (ValueError, AssertionError) as e:
 
 ## Verification
 
+### Confirmation of the Bug
+
+**Yes, we confirmed the bug existed before the fix:**
+
+1. **Git History Confirmation**:
+   - Checked commit `64d21bef62` (before our changes)
+   - Original code: `except ValueError:` (only caught ValueError)
+   - This confirms the bug existed in the codebase
+
+2. **Bug Report Evidence**:
+   - User reported exact error: `AssertionError: Experiment not set on Ax client`
+   - Stack trace matches the code location we fixed
+   - Ray 2.48.0 + Ax 1.0.0 = failure
+
+3. **Code Analysis**:
+   - Original code only handled `ValueError`
+   - Newer Ax versions (1.0.0+) raise `AssertionError`
+   - Exception would propagate and crash
+
+### Testing the Fix
+
 To verify the fix works:
 
 1. **Check the code changes**:
@@ -144,13 +165,22 @@ To verify the fix works:
    git diff python/ray/tune/search/ax/ax_search.py
    ```
 
-2. **Run the tutorial example**:
+2. **Compare with original**:
+   ```bash
+   git show 64d21bef62:python/ray/tune/search/ax/ax_search.py | grep -A 3 "except ValueError"
+   # Shows: except ValueError: (original - only caught ValueError)
+   
+   git show HEAD:python/ray/tune/search/ax/ax_search.py | grep -A 3 "except"
+   # Shows: except (ValueError, AssertionError): (fixed - catches both)
+   ```
+
+3. **Run the tutorial example**:
    ```bash
    source ~/neuro-venv/bin/activate
    python test_ax_doc_example.py
    ```
 
-3. **Check compatibility**:
+4. **Check compatibility**:
    - Works with `ax-platform < 1.0.0` (raises `ValueError`)
    - Works with `ax-platform >= 1.0.0` (raises `AssertionError`)
 
