@@ -1,0 +1,285 @@
+2025-12-18 19:35:36,049	INFO worker.py:1927 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/Volumes/CrucialX6/Home/projects/ray/audit_bayesian.py", line 79, in <module>
+    from ray.tune.search.ax import AxSearch
+  File "/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/tune/search/ax/__init__.py", line 1, in <module>
+    from ray.tune.search.ax.ax_search import AxSearch
+  File "/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/tune/search/ax/ax_search.py", line 254
+    exp = self._ax.experiment
+    ^
+IndentationError: expected an indented block
+[I 2025-12-18 19:35:36,850] A new study created in memory with name: optuna
+2025-12-18 19:35:42,832	INFO tune.py:1009 -- Wrote the latest version of all result files and experiment state to '/Volumes/CrucialX6/Home/ray_results/easy_objective_2025-12-18_19-35-36' in 0.0045s.
+2025-12-18 19:35:48,423	INFO tune.py:1009 -- Wrote the latest version of all result files and experiment state to '/Volumes/CrucialX6/Home/ray_results/easy_objective_2025-12-18_19-35-45' in 0.0048s.
+======================================================================
+BAYESIAN SEARCHER AUDIT
+======================================================================
+
+Testing: AxSearch, OptunaSearch, HyperOptSearch
+Issues checked: serialization, version conflicts, concurrency
+
+======================================================================
+1. AxSearch Audit
+======================================================================
+This specifically tests the 'param_space' passing which triggers the Ax 1.0 crash
+❌ AxSearch Instantiation Failed: expected an indented block (ax_search.py, line 254)
+
+======================================================================
+2. OptunaSearch Audit
+======================================================================
+Testing concurrency and version compatibility
+
+======================================================================
+AUDITING: OptunaSearch
+======================================================================
+✓ Tuner created successfully
+Running tuner.fit()...
+╭───────────────────────────────────────────────────────────────────────╮
+│ Configuration for experiment     easy_objective_2025-12-18_19-35-36   │
+├───────────────────────────────────────────────────────────────────────┤
+│ Search algorithm                 SearchGenerator                      │
+│ Scheduler                        FIFOScheduler                        │
+│ Number of trials                 4                                    │
+╰───────────────────────────────────────────────────────────────────────╯
+
+View detailed results here: /Volumes/CrucialX6/Home/ray_results/easy_objective_2025-12-18_19-35-36
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2025-12-18_19-35-35_573390_59433/artifacts/2025-12-18_19-35-36/easy_objective_2025-12-18_19-35-36/driver_artifacts`
+
+Trial status: 1 PENDING
+Current time: 2025-12-18 19:35:39. Total running time: 0s
+Logical resource usage: 1.0/10 CPUs, 0/0 GPUs
+╭───────────────────────────────────────────────────────────╮
+│ Trial name                status            x           y │
+├───────────────────────────────────────────────────────────┤
+│ easy_objective_d3859361   PENDING    0.692333   0.0449386 │
+╰───────────────────────────────────────────────────────────╯
+
+Trial easy_objective_d3859361 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_d3859361 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.69233 │
+│ y                                        0.04494 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_d3859361 completed after 1 iterations at 2025-12-18 19:35:40. Total running time: 1s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_d3859361 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10546 │
+│ time_total_s                             0.10546 │
+│ training_iteration                             1 │
+│ score                                    0.73727 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_56c64d26 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_56c64d26 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.63788 │
+│ y                                        0.46254 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_56c64d26 completed after 1 iterations at 2025-12-18 19:35:41. Total running time: 1s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_56c64d26 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10099 │
+│ time_total_s                             0.10099 │
+│ training_iteration                             1 │
+│ score                                    1.10043 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_4c451d5c started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_4c451d5c config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.32174 │
+│ y                                        0.03189 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_4c451d5c completed after 1 iterations at 2025-12-18 19:35:42. Total running time: 2s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_4c451d5c result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10287 │
+│ time_total_s                             0.10287 │
+│ training_iteration                             1 │
+│ score                                    0.35363 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_ee13858c started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_ee13858c config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.20006 │
+│ y                                        0.71015 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_ee13858c completed after 1 iterations at 2025-12-18 19:35:42. Total running time: 3s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_ee13858c result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10086 │
+│ time_total_s                             0.10086 │
+│ training_iteration                             1 │
+│ score                                    0.91021 │
+╰──────────────────────────────────────────────────╯
+
+Trial status: 4 TERMINATED
+Current time: 2025-12-18 19:35:42. Total running time: 3s
+Logical resource usage: 1.0/10 CPUs, 0/0 GPUs
+Current best trial: 56c64d26 with score=1.1004278679578934 and params={'x': 0.6378840905296942, 'y': 0.4625437774281992}
+╭────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status              x           y     iter     total time (s)      score │
+├────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ easy_objective_d3859361   TERMINATED   0.692333   0.0449386        1           0.105464   0.737272 │
+│ easy_objective_56c64d26   TERMINATED   0.637884   0.462544         1           0.100993   1.10043  │
+│ easy_objective_4c451d5c   TERMINATED   0.32174    0.0318858        1           0.102872   0.353625 │
+│ easy_objective_ee13858c   TERMINATED   0.200061   0.710151         1           0.100856   0.910212 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+✓ tuner.fit() completed
+Best config: {'x': 0.6378840905296942, 'y': 0.4625437774281992}
+Best score: 1.1004
+
+✅ OptunaSearch: PASSED
+
+======================================================================
+3. HyperOptSearch Audit
+======================================================================
+Testing deprecation warnings and compatibility
+
+======================================================================
+AUDITING: HyperOptSearch
+======================================================================
+✓ Tuner created successfully
+Running tuner.fit()...
+╭───────────────────────────────────────────────────────────────────────╮
+│ Configuration for experiment     easy_objective_2025-12-18_19-35-45   │
+├───────────────────────────────────────────────────────────────────────┤
+│ Search algorithm                 SearchGenerator                      │
+│ Scheduler                        FIFOScheduler                        │
+│ Number of trials                 4                                    │
+╰───────────────────────────────────────────────────────────────────────╯
+
+View detailed results here: /Volumes/CrucialX6/Home/ray_results/easy_objective_2025-12-18_19-35-45
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2025-12-18_19-35-35_573390_59433/artifacts/2025-12-18_19-35-45/easy_objective_2025-12-18_19-35-45/driver_artifacts`
+
+Trial status: 1 PENDING
+Current time: 2025-12-18 19:35:45. Total running time: 0s
+Logical resource usage: 1.0/10 CPUs, 0/0 GPUs
+╭──────────────────────────────────────────────────────────╮
+│ Trial name                status            x          y │
+├──────────────────────────────────────────────────────────┤
+│ easy_objective_3da18ce8   PENDING    0.632537   0.727695 │
+╰──────────────────────────────────────────────────────────╯
+
+Trial easy_objective_3da18ce8 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_3da18ce8 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.63254 │
+│ y                                        0.72769 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_3da18ce8 completed after 1 iterations at 2025-12-18 19:35:46. Total running time: 0s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_3da18ce8 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10272 │
+│ time_total_s                             0.10272 │
+│ training_iteration                             1 │
+│ score                                    1.36023 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_78e765a1 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_78e765a1 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.47993 │
+│ y                                        0.07955 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_78e765a1 completed after 1 iterations at 2025-12-18 19:35:46. Total running time: 1s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_78e765a1 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10253 │
+│ time_total_s                             0.10253 │
+│ training_iteration                             1 │
+│ score                                    0.55947 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_2fefd9b7 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_2fefd9b7 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.75541 │
+│ y                                        0.26047 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_2fefd9b7 completed after 1 iterations at 2025-12-18 19:35:47. Total running time: 2s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_2fefd9b7 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10501 │
+│ time_total_s                             0.10501 │
+│ training_iteration                             1 │
+│ score                                    1.01589 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_988646b0 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_988646b0 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.48977 │
+│ y                                        0.31553 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_988646b0 completed after 1 iterations at 2025-12-18 19:35:48. Total running time: 2s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_988646b0 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10512 │
+│ time_total_s                             0.10512 │
+│ training_iteration                             1 │
+│ score                                    0.80529 │
+╰──────────────────────────────────────────────────╯
+
+Trial status: 4 TERMINATED
+Current time: 2025-12-18 19:35:48. Total running time: 2s
+Logical resource usage: 1.0/10 CPUs, 0/0 GPUs
+Current best trial: 3da18ce8 with score=1.3602313755399742 and params={'x': 0.6325366526472133, 'y': 0.7276947228927609}
+╭───────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status              x          y     iter     total time (s)      score │
+├───────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ easy_objective_3da18ce8   TERMINATED   0.632537   0.727695        1           0.102723   1.36023  │
+│ easy_objective_78e765a1   TERMINATED   0.479929   0.079545        1           0.102528   0.559474 │
+│ easy_objective_2fefd9b7   TERMINATED   0.755415   0.260471        1           0.105006   1.01589  │
+│ easy_objective_988646b0   TERMINATED   0.489765   0.315527        1           0.105118   0.805292 │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+✓ tuner.fit() completed
+Best config: {'x': 0.6325366526472133, 'y': 0.7276947228927609}
+Best score: 1.3602
+
+✅ HyperOptSearch: PASSED
+
+======================================================================
+AUDIT SUMMARY
+======================================================================
+AxSearch: ❌ FAILED
+  Error: Instantiation: expected an indented block (ax_search.py, line 254)
+OptunaSearch: ✅ PASSED
+HyperOptSearch: ✅ PASSED
+
+======================================================================

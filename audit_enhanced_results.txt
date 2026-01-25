@@ -1,0 +1,771 @@
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1209: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_gcs_server(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1209: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_gcs_server(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1339: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_monitor(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1339: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_monitor(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1170: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  self._webui_url, process_info = ray._private.services.start_api_server(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1170: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  self._webui_url, process_info = ray._private.services.start_api_server(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1273: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_raylet(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1273: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_raylet(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1139: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_log_monitor(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1139: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='UTF-8'>
+  process_info = ray._private.services.start_log_monitor(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+2025-12-18 19:39:02,384	INFO worker.py:1927 -- Started a local Ray instance.
+[I 2025-12-18 19:39:05,795] A new study created in memory with name: optuna
+2025-12-18 19:39:13,571	INFO tune.py:1009 -- Wrote the latest version of all result files and experiment state to '/Volumes/CrucialX6/Home/ray_results/easy_objective_2025-12-18_19-39-05' in 0.0131s.
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/hyperopt/atpe.py:19: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+======================================================================
+ENHANCED BAYESIAN SEARCHER AUDIT
+======================================================================
+
+Testing specific known issues:
+  1. AxSearch: AssertionError with Ax >= 1.0.0
+  2. OptunaSearch: Thread safety warnings, serialization
+  3. HyperOptSearch: Deprecation warnings, duplicate sampling
+  4. BayesOptSearch: Duplicate sampling issues
+
+======================================================================
+1. AxSearch Audit
+======================================================================
+Testing: AssertionError with Ax >= 1.0.0 (should be FIXED)
+❌ AxSearch Instantiation Failed: Ax must be installed!
+            You can install AxSearch with the command:
+            `pip install ax-platform`.
+
+======================================================================
+2. OptunaSearch Audit
+======================================================================
+Testing: Thread safety warnings (MOTPESampler), serialization issues
+
+======================================================================
+AUDITING: OptunaSearch
+======================================================================
+✓ Tuner created successfully
+Running tuner.fit() with 10 samples...
+╭───────────────────────────────────────────────────────────────────────╮
+│ Configuration for experiment     easy_objective_2025-12-18_19-39-05   │
+├───────────────────────────────────────────────────────────────────────┤
+│ Search algorithm                 SearchGenerator                      │
+│ Scheduler                        FIFOScheduler                        │
+│ Number of trials                 10                                   │
+╰───────────────────────────────────────────────────────────────────────╯
+
+View detailed results here: /Volumes/CrucialX6/Home/ray_results/easy_objective_2025-12-18_19-39-05
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2025-12-18_19-39-01_909484_59749/artifacts/2025-12-18_19-39-05/easy_objective_2025-12-18_19-39-05/driver_artifacts`
+
+Trial status: 1 PENDING
+Current time: 2025-12-18 19:39:05. Total running time: 0s
+Logical resource usage: 1.0/10 CPUs, 0/0 GPUs
+╭───────────────────────────────────────────────────────────╮
+│ Trial name                status            x           y │
+├───────────────────────────────────────────────────────────┤
+│ easy_objective_1c17279d   PENDING    0.553035   0.0604597 │
+╰───────────────────────────────────────────────────────────╯
+
+Trial easy_objective_1c17279d started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_1c17279d config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.55304 │
+│ y                                        0.06046 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_1c17279d completed after 1 iterations at 2025-12-18 19:39:06. Total running time: 1s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_1c17279d result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10637 │
+│ time_total_s                             0.10637 │
+│ training_iteration                             1 │
+│ score                                    0.61349 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_8747a385 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_8747a385 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.02302 │
+│ y                                         0.6972 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_8747a385 completed after 1 iterations at 2025-12-18 19:39:07. Total running time: 1s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_8747a385 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10412 │
+│ time_total_s                             0.10412 │
+│ training_iteration                             1 │
+│ score                                    0.72022 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_1d1c69f7 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_1d1c69f7 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.02016 │
+│ y                                        0.82419 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_1d1c69f7 completed after 1 iterations at 2025-12-18 19:39:08. Total running time: 2s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_1d1c69f7 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10502 │
+│ time_total_s                             0.10502 │
+│ training_iteration                             1 │
+│ score                                    0.84436 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_eb36351f started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_eb36351f config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.28318 │
+│ y                                        0.89994 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_eb36351f completed after 1 iterations at 2025-12-18 19:39:09. Total running time: 3s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_eb36351f result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10527 │
+│ time_total_s                             0.10527 │
+│ training_iteration                             1 │
+│ score                                    1.18312 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_5faee82a started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_5faee82a config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.64772 │
+│ y                                        0.14379 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_5faee82a completed after 1 iterations at 2025-12-18 19:39:09. Total running time: 4s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_5faee82a result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10437 │
+│ time_total_s                             0.10437 │
+│ training_iteration                             1 │
+│ score                                    0.79152 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_5678dedd started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_5678dedd config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.07402 │
+│ y                                        0.47498 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_5678dedd completed after 1 iterations at 2025-12-18 19:39:10. Total running time: 4s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_5678dedd result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10519 │
+│ time_total_s                             0.10519 │
+│ training_iteration                             1 │
+│ score                                    0.54901 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_d61499a9 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_d61499a9 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.82014 │
+│ y                                        0.68971 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_d61499a9 completed after 1 iterations at 2025-12-18 19:39:11. Total running time: 5s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_d61499a9 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10142 │
+│ time_total_s                             0.10142 │
+│ training_iteration                             1 │
+│ score                                    1.50985 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_0a979e36 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_0a979e36 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.69129 │
+│ y                                        0.46644 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_0a979e36 completed after 1 iterations at 2025-12-18 19:39:12. Total running time: 6s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_0a979e36 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10331 │
+│ time_total_s                             0.10331 │
+│ training_iteration                             1 │
+│ score                                    1.15773 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_d7b11b24 started with configuration:
+╭─────────────────────────────────────────────────╮
+│ Trial easy_objective_d7b11b24 config            │
+├─────────────────────────────────────────────────┤
+│ x                                        0.0842 │
+│ y                                        0.2467 │
+╰─────────────────────────────────────────────────╯
+
+Trial easy_objective_d7b11b24 completed after 1 iterations at 2025-12-18 19:39:12. Total running time: 7s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_d7b11b24 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10489 │
+│ time_total_s                             0.10489 │
+│ training_iteration                             1 │
+│ score                                    0.33091 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_284471c1 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_284471c1 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.33104 │
+│ y                                        0.40508 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_284471c1 completed after 1 iterations at 2025-12-18 19:39:13. Total running time: 7s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_284471c1 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                           0.104 │
+│ time_total_s                               0.104 │
+│ training_iteration                             1 │
+│ score                                    0.73611 │
+╰──────────────────────────────────────────────────╯
+
+Trial status: 10 TERMINATED
+Current time: 2025-12-18 19:39:13. Total running time: 7s
+Logical resource usage: 1.0/10 CPUs, 0/0 GPUs
+Current best trial: d61499a9 with score=1.5098536128121132 and params={'x': 0.8201441827019385, 'y': 0.6897094301101747}
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status               x           y     iter     total time (s)      score │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ easy_objective_1c17279d   TERMINATED   0.553035    0.0604597        1           0.106368   0.613495 │
+│ easy_objective_8747a385   TERMINATED   0.0230236   0.697196         1           0.10412    0.72022  │
+│ easy_objective_1d1c69f7   TERMINATED   0.0201631   0.824193         1           0.105018   0.844356 │
+│ easy_objective_eb36351f   TERMINATED   0.283183    0.899941         1           0.105265   1.18312  │
+│ easy_objective_5faee82a   TERMINATED   0.647721    0.143794         1           0.104365   0.791516 │
+│ easy_objective_5678dedd   TERMINATED   0.074024    0.474982         1           0.105193   0.549006 │
+│ easy_objective_d61499a9   TERMINATED   0.820144    0.689709         1           0.101421   1.50985  │
+│ easy_objective_0a979e36   TERMINATED   0.691291    0.466443         1           0.103313   1.15773  │
+│ easy_objective_d7b11b24   TERMINATED   0.0842031   0.246705         1           0.104888   0.330908 │
+│ easy_objective_284471c1   TERMINATED   0.331036    0.405076         1           0.104004   0.736112 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+✓ tuner.fit() completed
+  Trials completed: 10/10
+  Best config: {'x': 0.8201441827019385, 'y': 0.6897094301101747}
+  Best score: 1.5099
+
+✅ OptunaSearch: PASSED
+
+======================================================================
+3. HyperOptSearch Audit
+======================================================================
+Testing: Deprecation warnings, duplicate sampling/premature stop
+
+======================================================================
+AUDITING: HyperOptSearch
+======================================================================
+✓ Tuner created successfully
+Running tuner.fit() with 20 samples...
+╭───────────────────────────────────────────────────────────────────────╮
+│ Configuration for experiment     easy_objective_2025-12-18_19-39-13   │
+├───────────────────────────────────────────────────────────────────────┤
+│ Search algorithm                 SearchGenerator                      │
+│ Scheduler                        FIFOScheduler                        │
+│ Number of trials                 20                                   │
+╰───────────────────────────────────────────────────────────────────────╯
+
+View detailed results here: /Volumes/CrucialX6/Home/ray_results/easy_objective_2025-12-18_19-39-13
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2025-12-18_19-39-01_909484_59749/artifacts/2025-12-18_19-39-13/easy_objective_2025-12-18_19-39-13/driver_artifacts`
+
+Trial status: 1 PENDING
+Current time: 2025-12-18 19:39:14. Total running time: 0s
+Logical resource usage: 1.0/10 CPUs, 0/0 GPUs
+╭─────────────────────────────────────────────────────────╮
+│ Trial name                status           x          y │
+├─────────────────────────────────────────────────────────┤
+│ easy_objective_1972fb49   PENDING    0.47302   0.324393 │
+╰─────────────────────────────────────────────────────────╯
+
+Trial easy_objective_1972fb49 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_1972fb49 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.47302 │
+│ y                                        0.32439 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_1972fb49 completed after 1 iterations at 2025-12-18 19:39:14. Total running time: 0s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_1972fb49 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10539 │
+│ time_total_s                             0.10539 │
+│ training_iteration                             1 │
+│ score                                    0.79741 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_3001e2c8 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_3001e2c8 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.36451 │
+│ y                                        0.50853 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_3001e2c8 completed after 1 iterations at 2025-12-18 19:39:15. Total running time: 1s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_3001e2c8 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10332 │
+│ time_total_s                             0.10332 │
+│ training_iteration                             1 │
+│ score                                    0.87303 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_2e35bec6 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_2e35bec6 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.72666 │
+│ y                                        0.74831 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_2e35bec6 completed after 1 iterations at 2025-12-18 19:39:16. Total running time: 2s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_2e35bec6 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10124 │
+│ time_total_s                             0.10124 │
+│ training_iteration                             1 │
+│ score                                    1.47496 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_8ef05c05 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_8ef05c05 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.52055 │
+│ y                                        0.45036 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_8ef05c05 completed after 1 iterations at 2025-12-18 19:39:17. Total running time: 3s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_8ef05c05 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10288 │
+│ time_total_s                             0.10288 │
+│ training_iteration                             1 │
+│ score                                    0.97091 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_4e0d4a35 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_4e0d4a35 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.44679 │
+│ y                                        0.33991 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_4e0d4a35 completed after 1 iterations at 2025-12-18 19:39:18. Total running time: 4s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_4e0d4a35 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10445 │
+│ time_total_s                             0.10445 │
+│ training_iteration                             1 │
+│ score                                     0.7867 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_bc06eb28 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_bc06eb28 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.37407 │
+│ y                                        0.56225 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_bc06eb28 completed after 1 iterations at 2025-12-18 19:39:18. Total running time: 4s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_bc06eb28 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10359 │
+│ time_total_s                             0.10359 │
+│ training_iteration                             1 │
+│ score                                    0.93632 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_b55c4441 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_b55c4441 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.35811 │
+│ y                                        0.87121 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_b55c4441 completed after 1 iterations at 2025-12-18 19:39:19. Total running time: 5s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_b55c4441 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10345 │
+│ time_total_s                             0.10345 │
+│ training_iteration                             1 │
+│ score                                    1.22932 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_2b314874 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_2b314874 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.26372 │
+│ y                                        0.74062 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_2b314874 completed after 1 iterations at 2025-12-18 19:39:20. Total running time: 6s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_2b314874 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10496 │
+│ time_total_s                             0.10496 │
+│ training_iteration                             1 │
+│ score                                    1.00435 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_f2fd230c started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_f2fd230c config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.33506 │
+│ y                                        0.20439 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_f2fd230c completed after 1 iterations at 2025-12-18 19:39:21. Total running time: 7s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_f2fd230c result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10443 │
+│ time_total_s                             0.10443 │
+│ training_iteration                             1 │
+│ score                                    0.53945 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_e17ba7d5 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_e17ba7d5 config             │
+├──────────────────────────────────────────────────┤
+│ x                                         0.4647 │
+│ y                                        0.35984 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_e17ba7d5 completed after 1 iterations at 2025-12-18 19:39:21. Total running time: 7s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_e17ba7d5 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10529 │
+│ time_total_s                             0.10529 │
+│ training_iteration                             1 │
+│ score                                    0.82454 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_52f6507e started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_52f6507e config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.91302 │
+│ y                                         0.0905 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_52f6507e completed after 1 iterations at 2025-12-18 19:39:22. Total running time: 8s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_52f6507e result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10526 │
+│ time_total_s                             0.10526 │
+│ training_iteration                             1 │
+│ score                                    1.00352 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_68fe3d55 started with configuration:
+╭─────────────────────────────────────────────────╮
+│ Trial easy_objective_68fe3d55 config            │
+├─────────────────────────────────────────────────┤
+│ x                                        0.2794 │
+│ y                                        0.2621 │
+╰─────────────────────────────────────────────────╯
+
+Trial easy_objective_68fe3d55 completed after 1 iterations at 2025-12-18 19:39:23. Total running time: 9s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_68fe3d55 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10204 │
+│ time_total_s                             0.10204 │
+│ training_iteration                             1 │
+│ score                                     0.5415 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_a04df981 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_a04df981 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.55603 │
+│ y                                        0.24534 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_a04df981 completed after 1 iterations at 2025-12-18 19:39:23. Total running time: 10s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_a04df981 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                          0.1053 │
+│ time_total_s                              0.1053 │
+│ training_iteration                             1 │
+│ score                                    0.80137 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_c1437f27 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_c1437f27 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.30949 │
+│ y                                        0.30588 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_c1437f27 completed after 1 iterations at 2025-12-18 19:39:24. Total running time: 10s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_c1437f27 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10236 │
+│ time_total_s                             0.10236 │
+│ training_iteration                             1 │
+│ score                                    0.61537 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_c2563d9c started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_c2563d9c config             │
+├──────────────────────────────────────────────────┤
+│ x                                         0.4376 │
+│ y                                        0.04174 │
+╰──────────────────────────────────────────────────╯
+
+2025-12-18 19:39:29,194	INFO tune.py:1009 -- Wrote the latest version of all result files and experiment state to '/Volumes/CrucialX6/Home/ray_results/easy_objective_2025-12-18_19-39-13' in 0.0148s.
+Trial easy_objective_c2563d9c completed after 1 iterations at 2025-12-18 19:39:25. Total running time: 11s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_c2563d9c result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10519 │
+│ time_total_s                             0.10519 │
+│ training_iteration                             1 │
+│ score                                    0.47934 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_f4f09807 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_f4f09807 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.72018 │
+│ y                                        0.15194 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_f4f09807 completed after 1 iterations at 2025-12-18 19:39:26. Total running time: 12s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_f4f09807 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                          0.1017 │
+│ time_total_s                              0.1017 │
+│ training_iteration                             1 │
+│ score                                    0.87212 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_34e3a032 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_34e3a032 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.78175 │
+│ y                                        0.67077 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_34e3a032 completed after 1 iterations at 2025-12-18 19:39:26. Total running time: 12s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_34e3a032 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10429 │
+│ time_total_s                             0.10429 │
+│ training_iteration                             1 │
+│ score                                    1.45252 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_3de307a0 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_3de307a0 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.86851 │
+│ y                                        0.71019 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_3de307a0 completed after 1 iterations at 2025-12-18 19:39:27. Total running time: 13s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_3de307a0 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10373 │
+│ time_total_s                             0.10373 │
+│ training_iteration                             1 │
+│ score                                     1.5787 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_1cfc0dbd started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_1cfc0dbd config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.71439 │
+│ y                                         0.7696 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_1cfc0dbd completed after 1 iterations at 2025-12-18 19:39:28. Total running time: 14s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_1cfc0dbd result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10394 │
+│ time_total_s                             0.10394 │
+│ training_iteration                             1 │
+│ score                                      1.484 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_fad07a54 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_fad07a54 config             │
+├──────────────────────────────────────────────────┤
+│ x                                        0.52313 │
+│ y                                        0.43759 │
+╰──────────────────────────────────────────────────╯
+
+Trial easy_objective_fad07a54 completed after 1 iterations at 2025-12-18 19:39:29. Total running time: 15s
+╭──────────────────────────────────────────────────╮
+│ Trial easy_objective_fad07a54 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.10349 │
+│ time_total_s                             0.10349 │
+│ training_iteration                             1 │
+│ score                                    0.96072 │
+╰──────────────────────────────────────────────────╯
+
+Trial status: 20 TERMINATED
+Current time: 2025-12-18 19:39:29. Total running time: 15s
+Logical resource usage: 1.0/10 CPUs, 0/0 GPUs
+Current best trial: 3de307a0 with score=1.578701547083972 and params={'x': 0.8685116630596568, 'y': 0.7101898840243153}
+╭────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status              x           y     iter     total time (s)      score │
+├────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ easy_objective_1972fb49   TERMINATED   0.47302    0.324393         1           0.105389   0.797413 │
+│ easy_objective_3001e2c8   TERMINATED   0.364506   0.508528         1           0.103317   0.873034 │
+│ easy_objective_2e35bec6   TERMINATED   0.726655   0.748306         1           0.101244   1.47496  │
+│ easy_objective_8ef05c05   TERMINATED   0.52055    0.450363         1           0.102883   0.970913 │
+│ easy_objective_4e0d4a35   TERMINATED   0.44679    0.339912         1           0.104449   0.786702 │
+│ easy_objective_bc06eb28   TERMINATED   0.374065   0.56225          1           0.103593   0.936316 │
+│ easy_objective_b55c4441   TERMINATED   0.358107   0.871214         1           0.103451   1.22932  │
+│ easy_objective_2b314874   TERMINATED   0.263721   0.740624         1           0.104963   1.00435  │
+│ easy_objective_f2fd230c   TERMINATED   0.335058   0.204392         1           0.104432   0.53945  │
+│ easy_objective_e17ba7d5   TERMINATED   0.464698   0.359839         1           0.105291   0.824537 │
+│ easy_objective_52f6507e   TERMINATED   0.913021   0.0904993        1           0.10526    1.00352  │
+│ easy_objective_68fe3d55   TERMINATED   0.279397   0.262098         1           0.102037   0.541495 │
+│ easy_objective_a04df981   TERMINATED   0.556032   0.245338         1           0.105299   0.80137  │
+│ easy_objective_c1437f27   TERMINATED   0.309486   0.30588          1           0.102362   0.615366 │
+│ easy_objective_c2563d9c   TERMINATED   0.437599   0.0417396        1           0.105193   0.479338 │
+│ easy_objective_f4f09807   TERMINATED   0.720183   0.151942         1           0.101695   0.872125 │
+│ easy_objective_34e3a032   TERMINATED   0.781748   0.670774         1           0.104291   1.45252  │
+│ easy_objective_3de307a0   TERMINATED   0.868512   0.71019          1           0.103731   1.5787   │
+│ easy_objective_1cfc0dbd   TERMINATED   0.714394   0.769603         1           0.103941   1.484    │
+│ easy_objective_fad07a54   TERMINATED   0.52313    0.437592         1           0.103488   0.960722 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+✓ tuner.fit() completed
+  Trials completed: 20/20
+  Best config: {'x': 0.8685116630596568, 'y': 0.7101898840243153}
+  Best score: 1.5787
+
+✅ HyperOptSearch: PASSED
+
+======================================================================
+4. BayesOptSearch Audit
+======================================================================
+Testing: Duplicate sampling issues with GP
+❌ BayesOptSearch Instantiation Failed: BayesOpt must be installed!. You can install BayesOpt with the command: `pip install bayesian-optimization==1.4.3`.
+
+======================================================================
+AUDIT SUMMARY
+======================================================================
+❌ AxSearch: FAILED
+   Instantiation: Ax must be installed!
+            You can install AxSearch with the command:
+            `pip install ax-platform`.
+✅ OptunaSearch: PASSED
+✅ HyperOptSearch: PASSED
+❌ BayesOptSearch: FAILED
+   Instantiation: BayesOpt must be installed!. You can install BayesOpt with the command: `pip install bayesian-optimization==1.4.3`.
+
+======================================================================
+/opt/homebrew/Cellar/python@3.9/3.9.25/Frameworks/Python.framework/Versions/3.9/lib/python3.9/subprocess.py:1052: ResourceWarning: subprocess 59765 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Volumes/CrucialX6/Home/neuro-venv/lib/python3.9/site-packages/ray/_private/node.py:1539: ResourceWarning: unclosed file <_io.BufferedWriter name=8>
+  self._kill_process_impl(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
