@@ -25,9 +25,9 @@ from ray.tune.utils.util import flatten_dict, unflatten_list_dict
 
 try:
     import ax
-    from ax.service.ax_client import AxClient
+    from ax.service.ax_client import AxClient, ObjectiveProperties
 except ImportError:
-    ax = AxClient = None
+    ax = AxClient = ObjectiveProperties = None
 
 # This exception only exists in newer Ax releases for python 3.7
 try:
@@ -221,10 +221,11 @@ class AxSearch(Searcher):
                 )
             self._ax.create_experiment(
                 parameters=self._space,
-                objective_name=self._metric,
+                objectives={
+                    self._metric: ObjectiveProperties(minimize=self._mode != "max")
+                },
                 parameter_constraints=self._parameter_constraints,
                 outcome_constraints=self._outcome_constraints,
-                minimize=self._mode != "max",
             )
         else:
             if any(
